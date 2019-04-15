@@ -1,5 +1,5 @@
 {
-  "name": "leaflet-axes-grid",
+  "name": "leaflet.axesgrid",
   "version": "1.0.0",
   "description": "Grid with Axes for image Overlay",
   "main": "Leaflet.TileGrid.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mudin/leaflet-axes-grid.git"
+    "url": "git+https://github.com/mudin/Leaflet.AxesGrid.git"
   },
   "keywords": [
     "leaflet",
@@ -21,7 +21,7 @@
   "author": "imudin07 <imudin07@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mudin/leaflet-axes-grid/issues"
+    "url": "https://github.com/mudin/Leaflet.AxesGrid/issues"
   },
-  "homepage": "https://github.com/mudin/leaflet-axes-grid#readme"
+  "homepage": "https://github.com/mudin/Leaflet.AxesGrid#readme"
 }
