@@ -5,20 +5,20 @@ You can use layer coords based grid and axes lines with labels,
 Useful for floorplan or drawings
 
 Check out the [demo](https://mudin.github.io/leaflet-axes-grid/).
-
+![Example](https://mudin.github.io/leaflet-axes-grid/screenshot.png?raw=true)
 ### Usage example
 
 ```javascript
-    L.axesGrid({
-      cells:5,
-			showLabel:true,
-			label: {
-				scale: 1,
-				unit: 'm',
-				color: '#404040',
-				size: 13
-			}
-		}).addTo(map);
+L.axesGrid({
+	cells:5,
+	showLabel:true,
+	label: {
+		scale: 1,
+		unit: 'm',
+		color: '#404040',
+		size: 13
+	}
+}).addTo(map);
 ```
 
 
