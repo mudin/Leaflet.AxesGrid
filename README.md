@@ -5,7 +5,7 @@ You can use layer coords based grid and axes lines with labels,
 Useful for floorplan or drawings
 
 Check out the [demo](https://mudin.github.io/leaflet-axes-grid/).
-![Example](https://mudin.github.io/leaflet-axes-grid/screenshot.png?raw=true)
+![Example](https://mudin.github.io/leaflet-axes-grid/screenshot.png)
 ### Usage example
 
 ```javascript
