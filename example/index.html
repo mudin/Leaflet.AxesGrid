@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Leaflet Axes Grid Demo</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link href="https://unpkg.com/leaflet@1.0.0/dist/leaflet.css" rel="stylesheet" type="text/css" />
+<script src="https://unpkg.com/leaflet@1.0.0/dist/leaflet-src.js"></script>
+
+<script src="../Leaflet.AxesGrid.js"></script>
+
+	<style>
+		html { height: 100%; }
+		body { height: 100%; margin: 0; padding: 0;}
+		.map { width: 100%; height: 100%; }
+		.leaflet-pane, .leaflet-overlay-pane {
+			z-index: unset;
+		}
+	</style>
+</head>
+<body>
+	<div id="map" class="map"></div>
+
+	<div>
+	</div>
+
+	<script>
+		function getBounds(w,h) {
+
+			const scale = Math.ceil(w / 2.);
+			const southWest = [-h / scale / 2.0, -w / scale / 2.0];
+			const northEast = [h / scale / 2.0, w / scale / 2.0];
+			return [southWest, northEast];
+		}
+
+		var map = new L.Map('map',{
+			zoomControl:false,
+			crs: L.CRS.Simple,
+			minZoom:5,
+			maxZoom:13}).setView([0,0],10);
+
+		const imageUrl = './floorplan.png';
+    const imageBounds = getBounds(1101,784);
+
+		L.imageOverlay(imageUrl, imageBounds).addTo(map);
+
+		map.setMaxBounds(imageBounds);
+		L.axesGrid({
+			showLabel:true,
+			label: {
+				scale: 1,
+				unit: 'm',
+				color: '#404040',
+				size: 13
+			}
+		}).addTo(map);
+
+		const southWest = imageBounds[0];
+		const northEast = imageBounds[1];
+
+		for(let i=0;i<10;i++) {
+			const lat = Math.random()-0.5;
+			const lng = Math.random()*2-1.0;
+
+			L.marker([lat,lng],{
+			icon:L.icon({
+				iconUrl: 'https://cdn4.iconfinder.com/data/icons/24x24-free-pixel-icons/24/Red_star.png',
+				iconSize:     [20, 20], // size of the icon
+				iconAnchor:   [10, 10], // point of the icon which will correspond to marker's location
+			}),
+			draggable:true
+		}).addTo(map);
+		}
+	</script>
+
+</body>
+</html>
