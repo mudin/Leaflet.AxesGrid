@@ -1,6 +1,6 @@
 {
   "name": "leaflet.axesgrid",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Grid with Axes for image Overlay",
   "main": "Leaflet.TileGrid.js",
   "directories": {
